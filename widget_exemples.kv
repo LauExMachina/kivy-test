@@ -1,0 +1,119 @@
+
+# **********************************************************************************************************
+
+<ImagesSnail>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            source: "images/1.jpg"
+            size: self.size
+            pos: self.pos
+
+    FloatLayout:
+
+        Label:
+            color: 1, 1, 0, 1
+            size_hint: 0.2, 0.2
+            pos_hint: {"center_x": 0.7, "center_y": 0.75}
+            font_name: "fonts/Skaters.ttf"
+            font_size: "30dp"
+            text: "Voir la section \n\n   Snail Game"
+
+        Label:
+            color: 1, 1, 0, 1
+            size_hint: 0.2, 0.2
+            pos_hint: {"center_x": 0.3, "center_y": 0.2}
+            font_name: "fonts/Skaters.ttf"
+            font_size: "30dp"
+            text: "See section \n\n  Snail Game"
+            size_hint: 0.5, 0.5
+
+
+# **********************************************************************************************************
+
+<WidgetsExemple>:
+    rows: 3         # 3 widgets (3 Lignes) horizontale par défaut
+
+    canvas.before:
+
+        Color:
+            rgba: 1, 1, 1, 1
+
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: "images/black.jpg"
+
+
+    ToggleButton:
+        text: "OFF"
+        on_state: root.on_toggle_button_state(self)
+        size_hint: None, 1
+        width: "100dp"
+
+    Button:
+        text: "Compter"
+        on_press: root.on_button_click()
+        disabled: not root.compteur_actif
+
+    Label:
+        text: root.mon_texte
+        font_name: "fonts/Lcd.ttf"
+        font_size: "60dp"
+        color: 1, 0, 0, 1
+# -----------------------------------------------------
+    Switch:
+        id: mon_switch
+        on_active: root.on_switch_active(self)
+        size_hint: None, 1
+        width: "100dp"
+        active: True
+
+    Slider:
+
+        id: mon_slider
+        min: 0
+        max: 100
+        value: 50
+        orientation: "vertical"
+        disabled: not mon_switch.active
+
+    BoxLayout:
+        orientation: "vertical"
+
+        Label:
+            text: str(int(mon_slider.value))
+            font_name: "fonts/Stocky.ttf"
+            font_size: "40dp"
+            color: 1, 1, 0, 1
+        ProgressBar:
+            max: 100
+            value: mon_slider.value
+
+# -----------------------------------------------------
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Saisir votre nom :"
+        TextInput:
+            id: my_text_input
+            multiline: False
+            on_text_validate: root.on_text_validate(self)
+
+
+        Label:
+            font_name: "fonts/Monster.ttf"
+            font_size: "14dp"
+            text: "Votre nom est :\n" + root.text_input_str
+
+
+
+
+
+
+
+
+
+
+

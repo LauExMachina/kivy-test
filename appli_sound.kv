@@ -1,0 +1,67 @@
+<SoundsLab>:
+    orientation: "vertical"
+
+    canvas.before:
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: "images/naturev.jpg"
+
+    Label:
+        font_name: "fonts/Elegant.ttf"
+        font_size: "18dp"
+        text: "Choisissez votre ambiance et continez à naviguer"        # Va automatiquement gérer la taille du texte
+        size_hint_x: None                                               # Désactive la mise à l'échelle automatique en largeur
+        width: root.width                                               # Définit la largeur du label sur la largeur du layout parent
+        text_size: self.width, None                                     # Ajuste la taille du texte à la largeur du label
+        halign: 'center'                                                # Facultatif : centre le texte horizontalement dans le label
+        color: 0, 0, 0, 1
+        pos_hint: {"center_x":0.5, "center_y":0.05}                     # Positionne le label en haut de son parent
+
+
+    ToggleButton:
+        background_normal: "images/black_bird.png"
+        background_down: "images/green_bird.png"
+        pos_hint: {'center_x': 0.2, 'center_y': 0.8}
+
+        on_state: root.birds_sound(self)
+
+        size_hint: 0.3, 0.2                                 # Taille d'intialisation
+
+        on_press: self.size_hint = 0.40, 0.30               # Change la taille lorsqu'il est pressé
+
+        on_release: self.size_hint = 0.3, 0.2               # Revient à la taille initiale lorsqu'il est relâché
+
+
+
+    ToggleButton:
+
+        background_normal: "images/black_wave.png"
+        background_down: "images/green_wave.png"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+
+        on_state: root.waterfall_sound(self)
+
+        size_hint: 0.35, 0.20
+
+        on_press: self.size_hint = 0.45, 0.30
+
+        on_release: self.size_hint = 0.35, 0.20
+
+
+    ToggleButton:
+        background_normal: "images/black_music_notes.png"
+        background_down: "images/green_music_notes.png"
+        pos_hint: {'center_x': 0.8, 'center_y': 0.8}
+
+        on_state: root.ambiance_sound(self)
+
+        size_hint: 0.35, 0.18
+
+        on_press: self.size_hint = 0.45, 0.28
+
+        on_release: self.size_hint = 0.35, 0.18
+
+
+
+

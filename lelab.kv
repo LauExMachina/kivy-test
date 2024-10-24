@@ -1,0 +1,96 @@
+#:import layout_exemples layout_exemples
+#:import widget_exemples widget_exemples
+#:import boxlayout_with_action_bar boxlayout_with_action_bar
+#:import tabs tabs
+#:import appli_sound appli_sound
+#:import snail_game snail_game
+#:import page_acceuil page_acceuil
+#:import menu_principal menu_principal
+#:import images_exemple images_exemple
+
+
+
+
+<NavigationScreenManager>:
+
+
+# *********************************************** PAGE ACCEUIL SONS CHARGES*******************************
+
+
+
+    Screen:
+        name: "PageAcceuil"
+        orientation: "vertical"
+        PageAcceuil:
+
+
+
+# *********************************************** MENU PRINCIPAL *******************************************
+
+    Screen:
+        orientation: "vertical"
+        name: "MenuPrincipal"
+        on_enter: menu_principal.on_enter_once()
+        MenuPrincipal:
+            id: menu_principal
+
+
+# --------------------------------------------- Screen Sound -----------------------------------------------------------------
+
+    Screen:
+        name: "SoundsLab"               # Identifiant pour le menu principal
+        BoxLayoutWithActionBar:
+            title: "Menu"
+            SoundsLab:                  # Contenu de la page
+
+
+# ---------------------------------------------  Screen Présentation -----------------------------------------------------------------
+    Screen:
+        name: "PresentationTab"
+        BoxLayoutWithActionBar:
+            title: "Menu"
+            PresentationTab:
+
+
+# ---------------------------------------------- Screen Layouts ----------------------------------------------------
+
+    Screen:
+        name: "LayoutExemplesTabs"
+        BoxLayoutWithActionBar:
+            title: "Menu"
+            LayoutExemplesTabs:
+
+# -------------------------------------------- Screen Widgets ----------------------------------------------------------
+
+    Screen:
+        name: "WidgetExemplesTabs"
+        BoxLayoutWithActionBar:
+            title: "Menu"
+            WidgetExemplesTabs:
+
+# ----------------------------------------------------- Screen Canvas ------------------------------------------------------------
+
+    Screen:
+        name: "CanvasExemplesTabs"
+        BoxLayoutWithActionBar:
+            title: "Menu"
+            CanvasExemplesTabs:
+
+# ----------------------------------------------------- SNAIL GAME Canvas ------------------------------------------------------------
+
+    Screen:
+        name: "Snail"
+        on_leave: snail_game.bye()
+        BoxLayoutWithActionBar:
+            title: "Menu"
+            Snail:
+                id: snail_game
+
+# ----------------------------------------------------- IMAGES EXEMPLE ------------------------------------------------------------
+
+    Screen:
+        name: "ImagesExemple"
+
+        BoxLayoutWithActionBar:
+            title: "Menu"
+            ImagesExemple:

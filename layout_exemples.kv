@@ -1,0 +1,121 @@
+
+
+# ----------------------------- BOX LAYOUT------------------------------------------------------
+
+<BoxLayoutExemple>:
+    orientation: "horizontal"
+    # spacing: "10dp"
+    Button:
+        text: "A"
+        size_hint: .5, .5
+        # size: "100dp", "60dp"
+        # height: "60dp"
+        # x, right, center_x
+        # y, top, center_y
+        pos_hint: { "top": 1  }
+
+    BoxLayout:
+        spacing: "10dp"
+        orientation: "vertical"
+        Button:
+            text: "B1"
+        Button:
+            text: "B2"
+        Button:
+            text: "B3"
+        Button:
+            text: "B4"
+    Label:
+        text: "C"
+
+# ------------------------------- ANCHOR LAYOUT ----------------------------------------------------
+
+<AnchorLayoutExemple>:
+    # right, left, center
+    anchor_x: "center"
+    # bottom, top, center
+    anchor_y: "top"
+
+    BoxLayout:
+        size_hint: .2, .2
+        Button:
+            text: "A"
+        Button:
+            text: "B"
+
+# -------------------------------- GRID LAYOUT ---------------------------------------------------
+
+<GridLayoutExemple@GridLayout>:
+    # rows
+    cols : 3
+    # rows: 3
+    Button:
+        text: "A"
+        size_hint: None, 1
+        width: "60dp"
+    BoxLayoutExemple:
+    Button:
+        text: "C"
+    Button:
+        text: "D"
+        size_hint: None, 1
+        width: "60dp"
+    Button:
+        text: "E"
+    Button:
+        text: "F"
+
+# -------------------------------STACK LAYOUT ----------------------------------------------------
+
+<StackLayoutExemple>:
+
+# -------------------------------- SCROLL VIEW ---------------------------------------------------
+
+<ScrollExemple@ScrollView>:
+    ScrollStack:
+        size_hint_y: None
+        height: self.minimum_height
+        Button:
+            size_hint: None, None
+            size: dp(100), dp(100)
+
+
+# ------------------------------- PAGE LAYOUT ----------------------------------------------------
+
+<PageLayoutExemple@PageLayout>:  # Va regrouper tout les pages avec un slide
+
+    AnchorLayoutExemple:
+        canvas.before:
+            Color:
+                rgb: 0, 0, 0
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+    GridLayoutExemple:
+        canvas.before:
+            Color:
+                rgb: 0, 0, 0
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+    StackLayoutExemple:
+        canvas.before:
+            Color:
+                rgb: 0, 0, 0
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+    ScrollExemple:
+        canvas.before:
+            Color:
+                rgb: 0, 0, 0
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+
+# ------------------------------- PAGE LAYOUT Snail ----------------------------------------------------
+

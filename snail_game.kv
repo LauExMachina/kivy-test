@@ -1,0 +1,79 @@
+<Snail>:
+
+    canvas.before:
+
+        Color:
+            rgba: 1,1,1,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: "images/grass.jpg"
+
+        Color:
+            rgba: 1,1,1, self.opacite_fondu  # Lier l'opacité à la propriété opacite_fondu
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: "images/black.jpg"
+
+    Button: # up
+        id: up
+        background_normal: "images/n_black.png"
+        background_down: "images/n_white.png"
+        border: 0, 0, 0, 0                                   # Pas de bordure
+        size_hint: 0.2, 0.2
+        pos_hint: {"center_x": 0.7, "center_y": 0.3}
+        on_press: root.up()
+
+    Button: # down
+        id: down
+        background_normal: "images/s_black.png"
+        background_down: "images/s_white.png"
+        border: 0, 0, 0, 0
+        size_hint: 0.2, 0.2
+        pos_hint: {"center_x": 0.7, "center_y": 0.1}
+        on_press: root.down()
+
+
+
+    Button:   # right
+        id: right
+        background_normal: "images/e_black.png"
+        background_down: "images/e_white.png"
+        border: 0, 0, 0, 0
+        size_hint: 0.2, 0.2
+        pos_hint: {"center_x": 0.9, "center_y": 0.1}
+        on_press: root.right()
+
+    Button: # left
+        id: left
+        background_normal: "images/o_black.png"
+        background_down: "images/o_white.png"
+        border: 0, 0, 0, 0
+        size_hint: 0.2, 0.2
+        pos_hint: {"center_x": 0.5, "center_y": 0.1}
+        on_press: root.left()
+
+
+
+    Button:   # New Game implémenter en dernier pour qu'il s'affiche par dessus les autres
+        id: play_game
+
+        background_normal: ''
+        background_down: ''
+        background_color: 0, 0.5, 0, 1
+
+        font_name: "fonts/atwriter.ttf"
+
+        font_size: dp(18)
+        color: 1, 1, 1, 1
+        text: "Atteignez la salade\n      Jouer ?"
+        size_hint: 0.5, 0.1
+        pos_hint: {"center_x": 0.5, "center_y": 0.65}
+        on_press : root.start_game()
+        disabled: False
+        opacity: 1
+
+
+
+

@@ -1,0 +1,20 @@
+
+
+<BoxLayoutWithActionBar>:
+    orientation: "vertical"
+    ActionBar:
+        ActionView:
+            ActionPrevious:
+                title: root.title
+
+                on_release:
+                    root.sound_pop()
+                    app.root.pop()
+
+                app_icon: "images/lab_logo.png"
+                app_icon_height: "28dp"
+                app_icon_width: "28dp"
+
+
+
+

@@ -1,0 +1,327 @@
+
+
+# ****************************************** TEXTES **********************************************
+
+
+# *************************** PRESENTATION DU MENU PRINCIPALE Fr/En *******************************
+
+<PresentationFr>:
+
+    canvas.before:
+
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "images/space.jpg"
+
+
+    ScrollView:
+
+        size_hint: 1, 1
+
+        GridLayout:
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height
+
+
+            # Label principal
+
+            Label:
+                text: root.description_appli_fr()
+                font_name: "fonts/Starwars_italik.ttf"
+                font_size: dp(24)
+                size_hint_y: None
+                height: self.texture_size[1] + 150  # Identique au pagging/marging mais utiliser cette approche pour le texte
+                text_size: self.width - 110, None    # Marging
+                valign: 'top'
+                color: 1, 1, 0, 1  # Couleur du texte principal
+
+
+<PresentationEn>:
+
+    canvas.before:
+
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "images/space.jpg"
+
+    ScrollView:
+
+        size_hint: 1, 1
+
+        GridLayout:
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height
+
+
+            # Label principal
+
+            Label:
+                text: root.description_appli_en()
+                font_name: "fonts/Starwars_italik.ttf"
+                font_size: dp(24)
+                size_hint_y: None
+                height: self.texture_size[1] + 150  # Identique au pagging/marging mais utiliser cette approche pour le texte
+                text_size: self.width - 110, None
+                valign: 'top'
+                color: 1, 1, 0, 1
+
+
+
+
+# ******************************************** Description des layouts Fr/En *******************************************
+
+
+<LayoutDescriptionFr>:
+
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 0.2
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "images/geometry.jpg"
+
+    ScrollView:
+
+        size_hint: 1, 1
+
+        GridLayout:
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height
+
+            # Label principal
+
+            Label:
+                text: root.layout_description_fr()
+                font_name: "fonts/Elegant.ttf"
+                font_size: dp(23)
+                size_hint_y: None
+                height: self.texture_size[1] + 150  # Identique au pagging/marging mais utiliser cette approche pour le texte
+                text_size: self.width - 110, None
+                valign: 'top'
+                color: 1, 1, 0,0.8  # Couleur du texte principal
+
+
+
+<LayoutDescriptionEn>:
+
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 0.2
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "images/geometry.jpg"
+
+    ScrollView:
+
+        size_hint: 1, 1
+
+        GridLayout:
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height
+
+            # Label principal
+
+            Label:
+                text: root.layout_description_en()
+                font_name: "fonts/Elegant.ttf"
+                font_size: dp(23)
+                size_hint_y: None
+                height: self.texture_size[1] + 150  # Identique au pagging/marging mais utiliser cette approche pour le texte
+                text_size: self.width - 110, None
+                valign: 'top'
+                color: 1, 1, 0,0.8  # Couleur du texte principal
+
+
+
+# ***************************************** Description widget Fr/En ******************************************************
+
+
+<WidgetDescriptionFr>:
+
+    canvas.before:
+
+        Color:
+            rgba: 1, 1, 1, 0.3
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "images/black_blocks.jpg"
+
+    ScrollView:
+
+        size_hint: 1, 1
+
+        GridLayout:
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height
+
+            # Label principal
+
+            Label:
+                text: root.widget_description_fr()
+                font_name: "fonts/Elegant.ttf"
+                font_size: dp(23)
+                size_hint_y: None
+                height: self.texture_size[1] + 150  # Identique au pagging/marging mais utiliser cette approche pour le texte
+                text_size: self.width - 110, None
+                valign: 'top'
+                color: 1, 1, 0,0.8  # Couleur du texte principal
+
+
+<WidgetDescriptionEn>:
+
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 0.5
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "images/black_blocks.jpg"
+
+    ScrollView:
+
+        size_hint: 1, 1
+
+        GridLayout:
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height
+
+            # Label principal
+
+            Label:
+                text: root.widget_description_en()
+                font_name: "fonts/Elegant.ttf"
+                font_size: dp(23)
+                size_hint_y: None
+                height: self.texture_size[1] + 150  # Identique au pagging/marging mais utiliser cette approche pour le texte
+                text_size: self.width - 110, None
+                valign: 'top'
+                color: 1, 1, 0,0.8  # Couleur du texte principal
+
+
+# ***************************************** Canvas Description Fr/En  ******************************************************
+
+<CanevasDescriptionFr>:
+
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 0.3
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "images/arcade.jpg"
+
+    ScrollView:
+
+        size_hint: 1, 1
+
+        GridLayout:
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height
+
+            # Label principal
+
+            Label:
+                text: root.canvas_description_fr()
+                font_name: "fonts/Elegant.ttf"
+                font_size: dp(20)
+                size_hint_y: None
+                height: self.texture_size[1] + 150  # Identique au pagging/marging mais utiliser cette approche pour le texte
+                text_size: self.width - 110, None
+                valign: 'top'
+                color: 1, 1, 1, 1  # Couleur du texte principal
+
+
+
+<CanevasDescriptionEn>:
+
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 0.3
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "images/arcade.jpg"
+
+    ScrollView:
+
+        size_hint: 1, 1
+
+        GridLayout:
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height
+
+            # Label principal
+
+            Label:
+                text: root.canvas_description_en()
+                font_name: "fonts/Elegant.ttf"
+                font_size: dp(20)
+                size_hint_y: None
+                height: self.texture_size[1] + 150  # Identique au pagging/marging mais utiliser cette approche pour le texte
+                text_size: self.width - 110, None
+                valign: 'top'
+                color: 1, 1, 1, 1  # Couleur du texte principal
+
+
+
+
+# ***************************************** Snail Game Description  ******************************************************
+
+
+<SnailDescription>:
+
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 0.5
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "images/arcade.jpg"
+
+            Label:
+                text: "test"
+                size_hint: None, None       # Désactive le dimensionnement automatique pour permettre la personnalisation
+                size: self.texture_size     # Taille basée sur le contenu du texte
+                halign: "center"            # Centre le texte horizontalement
+                valign: "middle"            # Centre le texte verticalement
+                padding_x: 10               # Ajoute un espace horizontal (marge) autour du texte (modifiez cette valeur selon vos besoins)
+                padding_y: 10               # Ajoute un espace vertical (marge) autour du texte (modifiez cette valeur selon vos besoins)
+
+                text_size: self.width - 2 * self.padding_x, None  # Fixe la largeur du texte en tenant compte du padding_x pour le centrage
+
+
+
+<Ethan>:
+    BoxLayout:
+        canvas.before:
+            Color:
+                rgb: 1, 0, 0
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            text: "Ethan !!!!!"
+            font_size: "100dp"
+            font_name: "fonts/Monster.ttf"
+            color: 0, 0, 0, 1
+
+        Image:
+            source: "images/tm.jpeg"
+            color: 1,0,0

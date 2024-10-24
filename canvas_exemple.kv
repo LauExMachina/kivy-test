@@ -1,0 +1,118 @@
+# ************************************************************************************************************
+
+#: set taille dp(150)
+
+<CanvasForms>:
+
+    canvas:
+        Rectangle:
+            pos: self.center_x - taille/2, self.center_y - taille/2
+            size: taille, taille
+
+        Ellipse:
+            pos: self.center_x - dp(75), self.center_y + dp(110)
+            size: taille, taille/2
+
+        Line:  # point 1 x:0 y:0 / point 2 x:100 y:100 etc
+            points:(0,0, self.width/4,100, self.width/2,0, self.width*3/4, 100, self.width,0)
+            width: dp(2)
+
+# ************************************************************************************************************
+
+<CanvasLine>:
+    canvas:
+        Line:
+            points: (self.width/2, 0, self.width/2, self.height)
+            width: dp(2)
+        Line:
+            points: (0,self.height/2, self.width,self.height/2)
+            width: dp(2)
+
+# ************************************************************************************************************
+
+<CanvasLineForms>:
+    canvas:
+
+
+        Color:
+            rgba: 1,0,0,1  # 100 % de visibilité
+
+        Line:
+            ellipse: (self.center_x - dp(100), self.center_y + dp(130), dp(200), dp(100))
+            width: dp(2)
+
+        Line:
+
+            circle: (self.center_x, self.center_y,dp(100))
+            width: dp(2)
+
+
+        Line:
+            rectangle:(self.center_x - dp(100), self.center_y - dp(230), dp(200),dp(100))
+            width: dp(2)
+
+
+# ************************************************************************************************************
+
+
+<CanvasExemple6>:
+    Button:
+        canvas:
+            Rectangle:
+                pos: self.pos[0] + self.width, self.pos[1] + self.height         # On va additionner les nouvelles pos au tuple
+                size: 50, 50  # Ajustez la taille du Rectangle selon vos besoins
+        text: "A"
+
+# ************************************************************************************************************
+
+<CanvasExemple7>:
+    BoxLayout:
+        size: root.size   # Fait référence au widget (class)
+        Widget:
+            canvas:
+                Color:
+                    rgb: 0, 1, 0
+                Rectangle:
+                    size: root.size   # Fait référence ici au widget
+
+        RelativeLayout:               # Evite le chevauchement
+            canvas:
+                Color:
+                    rgb: 0, 0, 1
+                Rectangle:
+                    size: root.size   # Fait référence ici au widget
+                    # pos: self.pos   # Remplace cela
+
+# ************************************************************************************************************
+
+<CanvasExemple8>:
+    size: root.size
+    RelativeLayout:
+
+        canvas:
+            Color:
+                rgb: 0, 0, 1
+            Rectangle:
+                size: root.size
+
+    RelativeLayout:
+        canvas:
+            Color:
+                rgb: 1, 1, 1
+            Rectangle:
+                size: root.size
+                # pos: self.pos
+
+    RelativeLayout:
+        canvas:
+            Color:
+                rgb: 1, 0, 0
+            Rectangle:
+                size: root.size
+
+
+
+
+
+
+

@@ -1,0 +1,152 @@
+#:import layout_exemples layout_exemples
+#:import canvas_exemple canvas_exemple
+#:import textes textes
+
+# Tab Panel ne prend que des classes en paramètres
+
+
+
+# ************************************ Tables Presentation ********************************************
+
+<PresentationTab@TabbedPanel>:  # Assurez-vous que PresentationTab hérite de TabbedPanel
+    tab_font_name: "fonts/Lcd.ttf"
+    tab_font_size: "5dp"
+    do_default_tab: False
+
+
+
+    TabbedPanelItem:                    # Assurez-vous que cette ligne est correctement indentée
+        text: "Description Fr"
+        PresentationFr:
+
+    TabbedPanelItem:
+        text: "Description En"
+        PresentationEn:
+
+
+# ********************************** TABLES Layouts ****************************************************
+
+<LayoutExemplesTabs>:                   # Initialisé à TabbedPannel dans la classe
+    tab_font_name: "fonts/Lcd.ttf"
+    tab_font_size: "50dp"
+
+    do_default_tab: False               # Désactive l'onglet par défaut pour utiliser uniquement les onglets personnalisés
+
+
+# ------------------------------------------ Premier Onglet Imbriqué Dexcription Principale -----------------------------------------
+
+    TabbedPanelItem:                    # Onglets imbriqués
+
+        text: "Description"
+
+        TabbedPanel:
+            do_default_tab: False
+
+            TabbedPanelItem:
+                text: "Fr"
+                LayoutDescriptionFr:
+
+
+            TabbedPanelItem:
+                text: "En"
+                LayoutDescriptionEn:
+
+
+# ------------------------------------------ Onglet Box -----------------------------------------
+
+    TabbedPanelItem:
+        text: "Box"
+        BoxLayoutExemple:
+# ------------------------------------------ Onglet Anchor -----------------------------------------
+
+    TabbedPanelItem:
+        text: "Anchor"
+        AnchorLayoutExemple:
+
+# ------------------------------------------ Onglet Stack -----------------------------------------
+
+    TabbedPanelItem:
+        text: "Stack"
+        StackLayoutExemple:
+
+# ------------------------------------------ Onglet ScrollView -----------------------------------------
+
+    TabbedPanelItem:
+        text: "ScrollView"
+        ScrollExemple:
+
+# ------------------------------------------ Onglet Page -----------------------------------------
+    TabbedPanelItem:
+        text: "Page"
+        PageLayoutExemple:
+
+
+
+# ********************************** Tables Canevas **************************************
+
+<CanvasExemplesTabs>:
+
+    tab_font_name: "fonts/atwriter.ttf"
+    tab_font_size: "5dp"
+    do_default_tab: False
+    color: 1,1,1,0.5
+
+    TabbedPanelItem:
+        text: "Description"
+
+        TabbedPanel:
+            do_default_tab: False
+
+            TabbedPanelItem:
+                text: "Fr"
+                CanevasDescriptionFr:
+
+            TabbedPanelItem:
+                text: "En"
+                CanevasDescriptionEn:
+
+
+    TabbedPanelItem:
+        text: "Formes"
+        CanvasForms:
+
+    TabbedPanelItem:
+        text: "Lignes"
+        CanvasLine:
+
+    TabbedPanelItem:
+        text: "Animation"
+        ImagesSnail:
+
+
+
+
+# ********************************* Widget Tables *******************************************
+
+
+<WidgetExemplesTabs>:
+    tab_font_name: "fonts/Lcd.ttf"
+    tab_font_size: "5dp"
+    do_default_tab: False
+
+    TabbedPanelItem:
+        text: "Description"
+
+        TabbedPanel:
+            do_default_tab: False
+
+            TabbedPanelItem:
+                text: "Fr"
+                WidgetDescriptionFr:
+
+            TabbedPanelItem:
+                text: "En"
+                WidgetDescriptionEn:
+
+    TabbedPanelItem:
+        text: "Widgets"
+        WidgetsExemple:
+
+
+
+

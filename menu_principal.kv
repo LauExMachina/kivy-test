@@ -1,0 +1,125 @@
+
+<MenuPrincipal>:
+    orientation: "vertical"
+
+    canvas.before:
+
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "images/blackw.png"
+
+        Color:
+            rgba: 1, 0, 0, 1        # Couleur de l'ellipse (rouge)
+
+        Line:  # Soulignage
+            points: (self.center_x * 0.6, self.center_y * 1.78, self.center_x *1.4, self.center_y * 1.78)
+            width: 2
+
+
+
+        Line:
+            ellipse: (self.center_x * 0.7, self.center_y * 1.52, self.width * 0.3, self.height * 0.1)
+            width: 3
+
+        Line:
+            ellipse: (self.center_x * 0.7, self.center_y * 1.27, self.width * 0.3, self.height * 0.1)
+            width: 3
+
+        Line:
+            ellipse: (self.center_x * 0.7, self.center_y * 1.03, self.width * 0.3, self.height * 0.1)
+            width: 3
+
+        Line:
+            ellipse: (self.center_x * 0.7, self.center_y * 0.78, self.width * 0.3, self.height * 0.1)
+            width: 3
+
+        Line:
+            ellipse: (self.center_x * 0.7, self.center_y * 0.53, self.width * 0.3, self.height * 0.1)
+            width: 3
+
+        Line:
+            ellipse: (self.center_x * 0.7, self.center_y * 0.28, self.width * 0.3, self.height * 0.1)
+            width: 3
+
+        Line:
+            ellipse: (self.center_x * 0.7, self.center_y * 0.03, self.width * 0.3, self.height * 0.1)
+            width: 3
+
+
+    Label:
+
+        text: "La Vitrine de Lau"
+        font_name: "fonts/Baseball.ttf"
+        font_size: "25dp"
+
+    Button:
+        text: "DESCRIPTION"
+        font_name: "fonts/Skaters.ttf"
+        font_size: dp(25)
+        background_color: 0, 0, 0, 0       # Rend le rectangle du bouton transparent
+
+        on_press:
+            root.bubble()
+            app.root.push("PresentationTab")
+
+    Button:
+        text: "MUSIQUE / SON"
+        font_name: "fonts/Skaters.ttf"
+        font_size: dp(25)
+        background_color: 0, 0, 0, 0
+
+        on_press:
+            root.bubble()
+            app.root.push("SoundsLab")
+
+    Button:
+        text: "LAYOUTS"
+        font_name: "fonts/Skaters.ttf"
+        font_size: dp(25)
+        background_color: 0, 0, 0, 0
+
+        on_press:
+            root.bubble()
+            app.root.push("LayoutExemplesTabs")
+
+    Button:
+        text: "WIDGETS"
+        font_name: "fonts/Skaters.ttf"
+        font_size: dp(25)
+        background_color: 0, 0, 0, 0
+
+        on_press:
+            root.bubble()
+            app.root.push("WidgetExemplesTabs")
+
+    Button:
+        text: "CANVAS"
+        font_name: "fonts/Skaters.ttf"
+        font_size: dp(25)
+        background_color: 0, 0, 0, 0
+
+        on_press:
+            root.bubble()
+            app.root.push("CanvasExemplesTabs")
+
+    Button:
+        text: "SNAIL GAME"
+        font_name: "fonts/Skaters.ttf"
+        font_size: dp(25)
+        background_color: 0, 0, 0, 0
+
+        on_press:
+            root.bubble()
+            app.root.push("Snail")
+
+    Button:
+        text: "IMAGES"
+        font_name: "fonts/Skaters.ttf"
+        font_size: dp(25)
+        background_color: 0, 0, 0, 0
+
+        on_press:
+            root.bubble()
+            app.root.push("ImagesExemple")
+

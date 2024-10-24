@@ -1,0 +1,36 @@
+
+<PageAcceuil>:
+
+    orientation: "vertical"
+
+    canvas.before:
+
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "images/arcade.jpg"
+
+
+    Image:
+        source: "images/lab_logo.png"
+        size_hint: 0.35, 0.35
+        pos_hint: {"center_x": 0.5, "center_y": 0.85}
+
+    Image:
+        source: "images/donut.gif"
+        pos_hint:{"center_x": 0.5, "center_y": 0.42}
+        size_hint: 0.5, 0.5
+        anim_delay: 1/35
+
+    Button:
+        background_color: 0, 0, 0, 0       # Rend le rectangle du bouton transparent
+        text: "ENTER"
+        font_name: "fonts/Skaters.ttf"
+        color: 1, 1, 0, 1
+        font_size: dp(50)
+        pos_hint: {"center_x": 0.5, "center_y": 0.42}
+        on_press:
+            app.root.push("MenuPrincipal")
+
+
+
